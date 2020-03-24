@@ -36,18 +36,26 @@ socket.on('update', function(data) {
           ctx.fillStyle = data.message[0];
           ctx.fillRect(data.message[1], data.message[2], data.message[3], data.message[4]);
       }
-      return
+      break
+
     //채팅 영역
     case 'message':
       className = 'other'
+      AppendMessage(className, data)
       break
     case 'connect':
       className = 'connect'
+      AppendMessage(className, data)
       break
     case 'disconnect':
       className = 'disconnect'
+      AppendMessage(className, data)
       break
   }
+})
+
+function AppendMessage(className, data)
+{
   var chat = document.getElementById('chat')
 
   var message = document.createElement('div')
@@ -57,7 +65,7 @@ socket.on('update', function(data) {
   message.appendChild(node)
   chat.appendChild(message)
   chat.scrollTop = chat.scrollHeight;
-})
+}
 
 /* 메시지 전송 함수 */
 function send() {
