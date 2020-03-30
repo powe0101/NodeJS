@@ -6,6 +6,9 @@ const server = http.createServer(app)
 const io = socket(server)
 const fs = require('fs')
 
+
+
+
 app.use('/css', express.static('./static/css'))
 app.use('/js', express.static('./static/js'))
 
