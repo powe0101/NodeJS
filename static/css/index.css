@@ -11,7 +11,7 @@
   
   /* 채팅 영역 */
   #chat {
-    height: 90%;
+    height: 60%;
     width: 100%;
     overflow-y: auto;
   }

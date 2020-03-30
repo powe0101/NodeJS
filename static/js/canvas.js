@@ -1,5 +1,3 @@
-var socket = io()
-
 $(document).ready(function(){
     // canvas
     var cnvs = document.getElementById('cnvs');
